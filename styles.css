@@ -1,0 +1,47 @@
+/*
+Sources used:
+Background image resizing -- https://css-tricks.com/perfect-full-page-background-image/
+*/
+:root {
+    --flax: #ffee95ff;
+    --lavender-blush: #ffededff;
+    --lavender-pink: #f9aadaff;
+    --plum-web: #ce9ed1ff;
+    --rich-black: #021e27ff;
+}
+.bg {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    z-index: -2;
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+  }
+.biopic {
+    margin: 5%;
+    max-width: 20%;
+}
+.content-holder {
+    height: 75%;
+    width: 75%;
+    position:absolute;
+    top:25%;
+    left:25%;
+    z-index: -1;
+    margin-top: -5%;
+    margin-left:-13%;
+    background-color: var(--lavender-blush);
+    border: medium solid var(--flax);
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    text-align: right;
+    background-color: var(--lavender-blush);
+    color: #fff;
+}
+  
