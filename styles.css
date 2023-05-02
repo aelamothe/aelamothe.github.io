@@ -18,11 +18,24 @@ Background image resizing -- https://css-tricks.com/perfect-full-page-background
     min-width: 100%;
     min-height: 100%;
   }
+.text {
+    /*Add text styling here*/
+  }
 .biopic {
     margin: 5%;
     max-width: 20%;
 }
-.content-holder {
+.video {
+    grid-area: video;
+    height: 0; 
+    padding-bottom: 
+    calc(56.25%); 
+    position:relative; 
+    width: 100%;
+}
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
     height: 75%;
     width: 75%;
     position:absolute;
@@ -31,9 +44,17 @@ Background image resizing -- https://css-tricks.com/perfect-full-page-background
     z-index: -1;
     margin-top: -5%;
     margin-left:-13%;
-    background-color: var(--lavender-blush);
-    border: medium solid var(--flax);
-}
+    background-color: #fff;
+    border: medium solid var(--lavender-blush);
+    color: #444;
+  
+    /* Defines grid-template-columns and grid-template-areas values */
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas:
+      '. . . .'
+      '. video video video'
+      '. video video video'
+  }
 footer {
     position: fixed;
     left: 0;
