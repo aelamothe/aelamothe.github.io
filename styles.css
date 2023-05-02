@@ -8,22 +8,37 @@ Background image resizing -- https://css-tricks.com/perfect-full-page-background
     --lavender-pink: #f9aadaff;
     --plum-web: #ce9ed1ff;
     --rich-black: #021e27ff;
+    font-family: 'Mali', cursive;
 }
 .bg {
     position: fixed; 
     top: 0; 
     left: 0;
     z-index: -2;
-    /* Preserve aspet ratio */
+    /* Preserve aspect ratio */
     min-width: 100%;
     min-height: 100%;
   }
-.text {
-    /*Add text styling here*/
+.bg-rect {
+    height: 75%;
+    width: 75%;
+    z-index: -3;
+    margin-top: -5%;
+    margin-left:-13%;
+    background-color: #fff;
+    border: medium solid var(--lavender-blush);
+    color: #444;
+}
+.headline {
+    font-family: Mali;
+    font-weight: bold;
+    grid-area: headline;
   }
 .biopic {
     margin: 5%;
-    max-width: 20%;
+    min-width: 120%;
+    z-index: 1;
+    grid-area: biopic;
 }
 .video {
     grid-area: video;
@@ -36,24 +51,19 @@ Background image resizing -- https://css-tricks.com/perfect-full-page-background
 .wrapper {
     display: grid;
     grid-gap: 10px;
-    height: 75%;
-    width: 75%;
     position:absolute;
     top:25%;
     left:25%;
     z-index: -1;
     margin-top: -5%;
     margin-left:-13%;
-    background-color: #fff;
-    border: medium solid var(--lavender-blush);
-    color: #444;
-  
+
     /* Defines grid-template-columns and grid-template-areas values */
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-areas:
-      '. . . .'
-      '. video video video'
-      '. video video video'
+      '. headline headline headline'
+      'biopic video video video'
+      'biopic video video video'
   }
 footer {
     position: fixed;
