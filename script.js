@@ -1,12 +1,76 @@
 const navbar = document.getElementById("navbar");
 const footer = document.getElementById("footer");
-const projects = null;
+let projects = null;
 
 // Organizes projects into albums
 function renderProjects() {
-  // checks if an element with id "projects" exists
+  const len = projData.length;
+  let projHtml = [];
+  let html = "";
+
+  // Checks if an element with id "projects" exists
   if (document.getElementById("projects")) {
     projects = document.getElementById("projects");
+  } else return;
+
+  // Runs through the projects data and creates an element for each entry
+  for (let i = 0; i < len; i++) {
+    let project = document.createElement("div");
+    project.setAttribute("class", "col");
+    // Customizes info that appears in each card (Booststrap albums)
+    project.innerHTML =
+      `<div class="col">
+        <div class="card shadow-sm">
+          <svg
+            class="bd-placeholder-img card-img-top"
+            width="100%"
+            height="225"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <img src="` +
+      projData[i].thumbnail +
+      `" width="100%" height="100%" fill="#55595c"></rect>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">` +
+      projData[i].projectName +
+      `</text>
+          </svg>
+          <div class="card-body">
+            <p class="card-text">` +
+      projData[i].description +
+      `</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a
+                  type="button"
+                  class="btn btn-sm btn-outline-secondary"
+                  href="` +
+      projData[i].portfolioLink +
+      `" target="_blank" rel="noopener noreferrer">
+                  Page
+                </a>
+                <a
+                  type="button"
+                  class="btn btn-sm btn-outline-secondary"
+                  href="` +
+      projData[i].repo +
+      `" target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              </div>
+              <small class="text-body-secondary">` +
+      projData[i].tags +
+      `</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      `;
+
+    console.log(projData[i]);
+    projects.appendChild(project);
   }
 }
 
@@ -39,10 +103,7 @@ function renderDefaultPage() {
         </footer>
     `;
 
-  document.body.appendChild(navbar.content);
-  document.body.appendChild(footer.content);
-
-  // Renders projects page if appropriate element exists
-  if (projects) renderProjects();
+  // Renders projects page
+  renderProjects();
 }
 renderDefaultPage();
