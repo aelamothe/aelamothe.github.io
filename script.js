@@ -1,10 +1,18 @@
-const navbar = document.getElementById('navbar');
-const footer = document.getElementById('footer');
+const navbar = document.getElementById("navbar");
+const footer = document.getElementById("footer");
+const projects = null;
 
-function renderPage () {
-    let projArray = [];
-    // Renders constant elements on page (navbar, footer)
-    navbar.innerHTML = `
+// Organizes projects into albums
+function renderProjects() {
+  // checks if an element with id "projects" exists
+  if (document.getElementById("projects")) {
+    projects = document.getElementById("projects");
+  }
+}
+
+// Renders constant elements on page (navbar, footer)
+function renderDefaultPage() {
+  navbar.innerHTML = `
         <nav class="navbar navbar-expand-lg" style="background-color: var(--lavender-pink);">
             <div class="container-fluid">
               <a class="navbar-brand" href="./index.html">Anastasia Lamothe</a>
@@ -25,15 +33,16 @@ function renderPage () {
           </nav>
     `;
 
-    footer.innerHTML = `
+  footer.innerHTML = `
         <footer>
             <p>© 2023  Anastasia Lamothe</p>
         </footer>
-    `
-    
-    document.body.appendChild(navbar.content);
-    document.body.appendChild(footer.content);
-    
-}
+    `;
 
-renderPage();
+  document.body.appendChild(navbar.content);
+  document.body.appendChild(footer.content);
+
+  // Renders projects page if appropriate element exists
+  if (projects) renderProjects();
+}
+renderDefaultPage();
