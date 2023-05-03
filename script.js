@@ -16,23 +16,7 @@ function renderPage () {
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Work
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Bus Route Tracker</a></li>
-                      <li><a class="dropdown-item" href="#">Eyes</a></li>
-                      <li><a class="dropdown-item" href="#">PacMan Factory</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Tower of Hanoi</a></li>
-                      <li><a class="dropdown-item" href="#">Dynamic Grid</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link">Contact</a>
+                    <a class="nav-link" href="#">Projects</a>
                   </li>
                 </ul>
               </div>
