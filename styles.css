@@ -54,7 +54,6 @@ Background image resizing -- https://css-tricks.com/perfect-full-page-background
     position:fixed;
     top:25%;
     left:25%;
-    z-index: -1;
     margin-top: -5%;
     margin-left:-20%;
 
