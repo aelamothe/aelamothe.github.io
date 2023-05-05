@@ -5,8 +5,6 @@ let projects = null;
 // Organizes projects into albums
 function renderProjects() {
   const len = projData.length;
-  let projHtml = [];
-  let html = "";
 
   // Checks if an element with id "projects" exists
   if (document.getElementById("projects")) {
@@ -68,7 +66,7 @@ function renderProjects() {
 // Renders constant elements on page (navbar, footer)
 function renderDefaultPage() {
   navbar.innerHTML = `
-        <nav class="navbar navbar-expand-lg" style="background-color: var(--lavender-pink);">
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: var(--lavender-pink);">
             <div class="container-fluid">
               <a class="navbar-brand" href="./index.html">Anastasia Lamothe</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,6 +79,12 @@ function renderDefaultPage() {
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="./projects.html">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/anastasia-lamothe/">LinkedIn</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/aelamothe">GitHub</a>
                   </li>
                 </ul>
               </div>

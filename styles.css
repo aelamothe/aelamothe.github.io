@@ -5,14 +5,16 @@ Background image resizing -- https://css-tricks.com/perfect-full-page-background
 
 /*Custom colors and fonts*/
 :root {
-  --flax: #ffee95ff;
+  --gold: #f8ba02;
   --lavender-blush: #ffededff;
   --lavender-pink: #f9aadaff;
   --plum-web: #ce9ed1ff;
   --rich-black: #021e27ff;
   font-family: "Fredericka the Great", cursive;
+  font-family: "Libre Franklin", sans-serif;
   font-family: "Mali", cursive;
 }
+
 /*Class styling*/
 .bg {
   position: fixed;
@@ -23,69 +25,82 @@ Background image resizing -- https://css-tricks.com/perfect-full-page-background
   min-width: 100%;
   min-height: 100%;
 }
+
 .bg-rect {
-  height: 100%;
+  height: 85%;
   min-width: 80px;
   max-width: 875px;
-  z-index: -2;
   position: relative;
   margin-top: 4%;
   margin-left: 15%;
   background-color: rgba(255, 255, 255, 0.9);
-  border: medium solid var(--lavender-blush);
+  border: thick solid var(--lavender-blush);
+  border-radius: 25px;
   color: #444;
 }
+
+.text {
+  font-family: Libre Franklin;
+}
+
 .header {
   font-family: Fredericka the Great;
   font-weight: bold;
-  text-align: center;
+  color: var(--rich-black);
   position: relative;
   margin-top: 25px;
   grid-area: header;
 }
+
 .biopic {
   margin: 5%;
   max-width: 110%;
   z-index: 1;
   grid-area: biopic;
 }
-.video {
-  grid-area: video;
-  position: absolute;
-}
-.bio {
-  grid-area: bio;
-  overflow-y: scroll;
-  z-index: 2;
-}
-.wrapper {
-  position: fixed;
-  top: 25%;
-  left: 25%;
-  margin-top: -5%;
-  margin-left: -20%;
 
+.video {
+  min-width: 100%;
+  min-height: auto;
+  grid-area: video;
+}
+
+.bio {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  line-height: 2em;
+  grid-area: bio;
+}
+
+.wrapper {
   /* Defines grid-template-columns and grid-template-areas values */
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 20% 30% 20%;
+  grid-template-columns: 20% 50% 20%;
   grid-template-areas:
     "biopic header header"
     "biopic video video"
     ". video video"
     ". bio bio";
 }
+
 .card-body {
   width: 100%;
   min-height: 25%;
 }
+
 .card-title {
   margin: 30px 0px 0px 15px;
   font-family: Fredericka the Great;
   font-weight: bolder;
   color: var(--rich-black);
 }
+
 /*Specific elements styling*/
+a {
+  color: var(--gold);
+}
+
 footer {
   position: fixed;
   left: 0;
