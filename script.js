@@ -81,10 +81,10 @@ function renderDefaultPage() {
                     <a class="nav-link" href="./projects.html">Projects</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="https://www.linkedin.com/in/anastasia-lamothe/">LinkedIn</a>
+                    <a class="nav-link" href="https://www.linkedin.com/in/anastasia-lamothe/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/aelamothe">GitHub</a>
+                    <a class="nav-link" href="https://github.com/aelamothe" target="_blank" rel="noopener noreferrer">GitHub</a>
                   </li>
                 </ul>
               </div>
