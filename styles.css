@@ -2,79 +2,98 @@
 Sources used:
 Background image resizing -- https://css-tricks.com/perfect-full-page-background-image/
 */
+
+/*Custom colors and fonts*/
 :root {
-    --flax: #ffee95ff;
-    --lavender-blush: #ffededff;
-    --lavender-pink: #f9aadaff;
-    --plum-web: #ce9ed1ff;
-    --rich-black: #021e27ff;
-    font-family: 'Mali', cursive;
+  --flax: #ffee95ff;
+  --lavender-blush: #ffededff;
+  --lavender-pink: #f9aadaff;
+  --plum-web: #ce9ed1ff;
+  --rich-black: #021e27ff;
+  font-family: "Fredericka the Great", cursive;
+  font-family: "Mali", cursive;
 }
+/*Class styling*/
 .bg {
-    position: fixed; 
-    top: 0; 
-    left: 0;
-    z-index: -2;
-    /* Preserve aspect ratio */
-    min-width: 100%;
-    min-height: 100%;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  /* Preserve aspect ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
 .bg-rect {
-    min-height: 500px;
-    max-height: 525px;
-    min-width: 80px;
-    max-width: 875px;
-    z-index: -2;
-    position: relative;
-    margin-top: 4%;
-    margin-left:15%;
-    background-color: rgba(255, 255, 255, .9);
-    border: medium solid var(--lavender-blush);
-    color: #444;
+  height: 100%;
+  min-width: 80px;
+  max-width: 875px;
+  z-index: -2;
+  position: relative;
+  margin-top: 4%;
+  margin-left: 15%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: medium solid var(--lavender-blush);
+  color: #444;
 }
 .header {
-    font-family: Mali;
-    font-weight: bold;
-    text-align: center;
-    position: relative;
-    margin-top: 25px;
-    grid-area: header;
-  }
+  font-family: Fredericka the Great;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  margin-top: 25px;
+  grid-area: header;
+}
 .biopic {
-    margin: 5%;
-    max-width: 110%;
-    z-index: 1;
-    grid-area: biopic;
+  margin: 5%;
+  max-width: 110%;
+  z-index: 1;
+  grid-area: biopic;
 }
 .video {
-    grid-area: video;
-    position: absolute; 
+  grid-area: video;
+  position: absolute;
+}
+.bio {
+  grid-area: bio;
+  overflow-y: scroll;
+  z-index: 2;
 }
 .wrapper {
-    position:fixed;
-    top:25%;
-    left:25%;
-    margin-top: -5%;
-    margin-left:-20%;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  margin-top: -5%;
+  margin-left: -20%;
 
-    /* Defines grid-template-columns and grid-template-areas values */
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 30% 40% 30%;
-    grid-template-areas:
-      'biopic header header'
-      'biopic video video'
-      '. video video';
-  }
-  footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 25px;
-    margin-right: 25px;
-    text-align: right;
-    background-color: var(--lavender-blush);
-    color: #fff;
+  /* Defines grid-template-columns and grid-template-areas values */
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 20% 30% 20%;
+  grid-template-areas:
+    "biopic header header"
+    "biopic video video"
+    ". video video"
+    ". bio bio";
 }
-  
+.card-body {
+  width: 100%;
+  min-height: 25%;
+}
+.card-title {
+  margin: 30px 0px 0px 15px;
+  font-family: Fredericka the Great;
+  font-weight: bolder;
+  color: var(--rich-black);
+}
+/*Specific elements styling*/
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  margin-right: 25px;
+  text-align: right;
+  background-color: var(--lavender-blush);
+  color: #fff;
+}

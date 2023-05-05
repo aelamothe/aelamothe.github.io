@@ -24,7 +24,7 @@ var projData = [
     projectName: "Real Time Bus Tracking",
     portfolioLink: "https://aelamothe.github.io/map-animation/",
     repo: "https://github.com/aelamothe/map-animation",
-    thumbnail: "images/thumbnails/bus.png",
+    thumbnail: "images/thumbnails/map.png",
     tags: "Maps, Animation",
     description:
       "Going somewhere? Make sure to check the route before you head out. This fun exercise tracks the route of the Harvard-MIT bus by using Mapbox.",
