@@ -78,7 +78,10 @@ function renderDefaultPage() {
                     <a class="nav-link active" aria-current="page" href="./index.html" style="color:var(--gold-muted)">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./projects.html" style="color:var(--gold-muted)">Projects</a>
+                    <a class="nav-link" href="./projects.html" style="color:var(--gold-muted)">Coding Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://www.notion.so/aelamothe/UX-UI-Research-Design-fb7822130fbe4e33ae43bda06c71cc9f" target="_blank" rel="noopener noreferrer" style="color:var(--gold-muted)">UX Research</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="https://www.linkedin.com/in/anastasia-lamothe/" target="_blank" rel="noopener noreferrer" style="color:var(--gold-muted)">LinkedIn</a>
