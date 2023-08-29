@@ -5,14 +5,33 @@ Background image resizing -- https://css-tricks.com/perfect-full-page-background
 
 /*Custom colors and fonts*/
 :root {
-  --gold: #f8ba02;
-  --lavender-blush: #ffededff;
+  --gold: #CEAA35;
+  --gold-muted: #F1BD70;
+  --near-black: #0F1512;
   --lavender-pink: #f9aadaff;
   --plum-web: #ce9ed1ff;
   --rich-black: #021e27ff;
-  font-family: "Fredericka the Great", cursive;
-  font-family: "Libre Franklin", sans-serif;
-  font-family: "Mali", cursive;
+  --dark-green: #061818;
+  --tree-green: #022E1E;
+  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Limelight', cursive;
+  font-family: 'Mali', cursive;
+}
+
+body {
+  background-color: var(--dark-green);
+}
+
+.welcome {
+  position: relative;
+  height: 100%;
+  background-image: url("images/art-deco-bg-gif.gif");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  line-height: 15rem;
+  text-align: center;
+  grid-area: welcome;
 }
 
 /*Class styling*/
@@ -22,46 +41,44 @@ Background image resizing -- https://css-tricks.com/perfect-full-page-background
   left: 0;
   z-index: -2;
   /* Preserve aspect ratio */
-  min-width: 100%;
-  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .bg-rect {
-  height: 85%;
-  min-width: 80px;
   max-width: 875px;
-  position: relative;
-  margin-top: 4%;
-  margin-left: 15%;
   background-color: rgba(255, 255, 255, 0.9);
-  border: thick solid var(--lavender-blush);
+  border: thick solid var(--near-black);
   border-radius: 25px;
   color: #444;
 }
 
 .text {
   font-family: Libre Franklin;
+  padding: 2%;
 }
 
 .header {
   font-family: Fredericka the Great;
   font-weight: bold;
-  color: var(--rich-black);
+  color: var(--gold);
+  stroke: white;
   position: relative;
-  margin-top: 25px;
-  grid-area: header;
 }
 
 .biopic {
+  border: 1px solid var(--gold);
   margin: 5%;
-  max-width: 110%;
+  padding: 1%;
+  max-width: 90%;
   z-index: 1;
   grid-area: biopic;
 }
 
 .video {
-  min-width: 100%;
-  min-height: auto;
+  text-align: center;
+  min-width: 75%;
+  height: auto;
   grid-area: video;
 }
 
@@ -75,18 +92,21 @@ Background image resizing -- https://css-tricks.com/perfect-full-page-background
 .wrapper {
   /* Defines grid-template-columns and grid-template-areas values */
   display: grid;
+  width: 100vw;
+  height: 100vh;
   grid-gap: 10px;
-  grid-template-columns: 20% 50% 20%;
+  grid-template-columns: 2fr 2r 2fr 2fr;
+  grid-template-rows: 100%;
   grid-template-areas:
-    "biopic header header"
-    "biopic video video"
-    ". video video"
-    ". bio bio";
+    "welcome welcome welcome welcome"
+    ". biopic bio ."
+    ". video bio .";
 }
 
 .card-body {
   width: 100%;
   min-height: 25%;
+  max-width: 100%;
 }
 
 .card-title {
@@ -94,6 +114,10 @@ Background image resizing -- https://css-tricks.com/perfect-full-page-background
   font-family: Fredericka the Great;
   font-weight: bolder;
   color: var(--rich-black);
+}
+
+.projects {
+  margin-top: 5%;
 }
 
 /*Specific elements styling*/
@@ -109,6 +133,6 @@ footer {
   height: 25px;
   margin-right: 25px;
   text-align: right;
-  background-color: var(--lavender-blush);
+  background-color: var(--near-black);
   color: #fff;
 }

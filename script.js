@@ -14,11 +14,11 @@ function renderProjects() {
   // Runs through the projects data and creates an element for each entry
   for (let i = 0; i < len; i++) {
     let project = document.createElement("div");
-    project.setAttribute("class", "col");
+    project.setAttribute("class", "col projects");
     // Customizes info that appears in each card (Booststrap albums)
     project.innerHTML =
       `<div class="col">
-        <div class="card shadow-sm">
+        <div class="card shadow-sm" style="min-height:500px">
             <img src="` +
       projData[i].thumbnail +
       `" width="100%" height="100%" fill="#55595c"></rect>
@@ -66,25 +66,25 @@ function renderProjects() {
 // Renders constant elements on page (navbar, footer)
 function renderDefaultPage() {
   navbar.innerHTML = `
-        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: var(--lavender-pink);">
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: var(--tree-green);">
             <div class="container-fluid">
-              <a class="navbar-brand" href="./index.html">Anastasia Lamothe</a>
+              <a class="navbar-brand" style="color:var(--gold)" href="./index.html">Anastasia Lamothe</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="./index.html" style="color:var(--gold-muted)">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./projects.html">Projects</a>
+                    <a class="nav-link" href="./projects.html" style="color:var(--gold-muted)">Projects</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="https://www.linkedin.com/in/anastasia-lamothe/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a class="nav-link" href="https://www.linkedin.com/in/anastasia-lamothe/" target="_blank" rel="noopener noreferrer" style="color:var(--gold-muted)">LinkedIn</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/aelamothe" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="nav-link" href="https://github.com/aelamothe" target="_blank" rel="noopener noreferrer" style="color:var(--gold-muted)">GitHub</a>
                   </li>
                 </ul>
               </div>

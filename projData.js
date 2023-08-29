@@ -1,5 +1,37 @@
 var projData = [
   {
+    projectId: "project5",
+    projectName: "A Cover Worth 1000 Words",
+    portfolioLink: "https://aelamothe.github.io/cs171-final-project/#1",
+    repo: "https://github.com/aelamothe/cs171-final-project",
+    thumbnail: "images/thumbnails/1000cover.png",
+    tags: "Books, Data",
+    description:
+      "Explore how the aesthetic features of color and symbols vary across book covers, and how these variances might affect the perception of books.",
+  },
+  {
+    projectId: "project6",
+    projectName: "Banking Application",
+    portfolioLink:
+      "https://anastasia-lamothebankingapplication.s3.amazonaws.com/index.html",
+    repo: "https://github.com/aelamothe/banking-app",
+    thumbnail: "images/thumbnails/bank-app.png",
+    tags: "React, App",
+    description:
+      "Do you want your money to grow without having to put in the work? That may not be possible, but you can at least pretend that it is by interacting with the Bank of Anastasia.",
+  },
+  {
+    projectId: "project7",
+    projectName: "Shopping Cart Application",
+    portfolioLink:
+      "https://anastasia-lamotheshoppingcart.s3.amazonaws.com/index.html?",
+    repo: "https://github.com/aelamothe/shopping-cart-app/tree/master",
+    thumbnail: "images/thumbnails/shopping-cart.png",
+    tags: "React, Strapi",
+    description:
+      "Need to restock on some produce? Do so with this online shopping cart app, which pulls product information from a Strapi database.",
+  },
+  {
     projectId: "project1",
     projectName: "Pacmen Exercise",
     portfolioLink: "https://aelamothe.github.io/pacman-factory/",
